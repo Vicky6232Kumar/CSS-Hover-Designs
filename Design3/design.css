@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    position: relative;
+    height: 50vh;
+    width: 17rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    margin-left: 1rem;
+}
+.box{
+    position:absolute;
+    top: 2rem;
+    left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    padding: 1rem;
+    text-align: center;
+    transition-duration: 1s;
+}
+.card:hover .content{
+    transform: translateY(-50px);
+}
+.content h1{
+    position: absolute;
+    top: -2rem;
+    right: 1rem;
+    font-size: 6rem;
+    color: #00000038;
+    transition: all 1s;
+    pointer-events: none;
+}
+.card:hover .content h1{
+    color: #0000005b;
+    font-size: 2rem;
+}
+.content h2,
+.content p{
+    z-index: 1;
+    transition: all 0.2s;
+}
+.content a{
+    position: relative;
+    top: 1.5rem;
+    background-color: rgb(1, 204, 255);
+    font-size: 1.1rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 10px 10px rgba(0, 255, 132, 0.16);
+}
+.card:hover .content a{
+    background-color: aquamarine;
+}
+.out{
+    background-color: red;
+    color:white;
+}
+.card:hover .out{
+    background-color: blue;
+}

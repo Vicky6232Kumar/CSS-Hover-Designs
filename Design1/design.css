@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    
+}
+body{
+    display: flex;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.wrapper{
+    display: flex;
+}
+.icon{
+    margin: 0 20px;
+    cursor: pointer;
+    position: relative;
+}
+.icon span{
+    height: 3rem;
+    width: 3rem;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border-radius: 5rem;
+
+}
+.icon span i{
+    font-size: 1.5rem;
+    margin-top: .7rem;
+}
+.icon:hover{
+    color: white;
+}
+.toolTip{
+    position: relative;
+    top: 0;
+    background-color: white;
+    font-size: 1.1rem;
+    padding: .5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.icon:hover .toolTip{
+    top: -1rem;
+    opacity: 1;
+    pointer-events: auto;
+    color: white;
+}
+.toolTip::before{
+    position: absolute;
+    top: 2rem;
+    left: 43%;
+    content: "";
+    height: 0.8rem;
+    width: 0.8rem;
+    background-color: white;
+    transform: rotate(45deg);
+    transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.icon:hover span,
+.icon:hover .toolTip{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.facebook:hover span,
+.facebook:hover .toolTip,
+.facebook:hover .toolTip::before{
+    background-color:  #3b5998;
+}
+.twitter:hover span,
+.twitter:hover .toolTip,
+.twitter:hover .toolTip::before{
+    background-color:  #00acee;
+}
+.instagram:hover span,
+.instagram:hover .toolTip,
+.instagram:hover .toolTip::before{
+    background-color: #833AB4;
+}
+.github:hover span,
+.github:hover .toolTip,
+.github:hover .toolTip::before{
+    background-color: #171515;
+}
+.youtube:hover span,
+.youtube:hover .toolTip,
+.youtube:hover .toolTip::before{
+    background-color:  #FF0000;
+}
